@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 720' role='img' aria-label='Student mentoring system cover'>
+  <defs><linearGradient id='m1' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#1b2f4a'/><stop offset='100%' stop-color='#3f6b8b'/></linearGradient></defs>
+  <rect width='1200' height='720' fill='url(#m1)'/>
+  <circle cx='330' cy='330' r='90' fill='#cde7ff'/><circle cx='560' cy='330' r='90' fill='#a8d4ff'/><circle cx='790' cy='330' r='90' fill='#7ebcf7'/>
+  <rect x='280' y='430' width='560' height='90' rx='22' fill='#e8f4ff' fill-opacity='0.7'/>
+  <text x='120' y='100' fill='#ecf6ff' font-size='54' font-family='Sora, sans-serif' font-weight='700'>Student Mentoring System</text>
+  <text x='120' y='640' fill='#d9edff' font-size='30' font-family='Manrope, sans-serif'>Mentor matching, progress tracking, and engagement workflows</text>
+</svg>

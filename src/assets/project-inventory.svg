@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 720' role='img' aria-label='Inventory management project cover'>
+  <defs><linearGradient id='invbg' x1='0' x2='1' y1='0' y2='1'><stop offset='0%' stop-color='#4a2f1b'/><stop offset='100%' stop-color='#a16a3a'/></linearGradient></defs>
+  <rect width='1200' height='720' fill='url(#invbg)'/>
+  <rect x='140' y='140' width='920' height='420' rx='20' fill='#fff3e0' fill-opacity='0.16'/>
+  <rect x='220' y='220' width='200' height='260' rx='14' fill='#fde5c5'/><rect x='500' y='180' width='200' height='300' rx='14' fill='#f8d8ac'/><rect x='780' y='250' width='180' height='230' rx='14' fill='#f3c589'/>
+  <text x='120' y='100' fill='#fff3e0' font-size='54' font-family='Sora, sans-serif' font-weight='700'>Inventory Management System</text>
+  <text x='120' y='640' fill='#ffe7cf' font-size='30' font-family='Manrope, sans-serif'>Stock tracking, transaction logging, and dashboard reporting</text>
+</svg>

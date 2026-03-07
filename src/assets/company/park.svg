@@ -1,0 +1,5 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Park National Bank">
+  <rect width="160" height="160" rx="28" fill="#1f4d7a"/>
+  <circle cx="80" cy="80" r="54" fill="#ffffff" fill-opacity="0.16"/>
+  <text x="80" y="92" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">P</text>
+</svg>

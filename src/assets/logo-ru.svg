@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RU monogram logo">
+  <defs>
+    <linearGradient id="ruBg" x1="28" y1="20" x2="224" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f6e8d2"/>
+      <stop offset="1" stop-color="#caa27a"/>
+    </linearGradient>
+    <linearGradient id="ruRing" x1="32" y1="24" x2="220" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9f6233"/>
+      <stop offset="1" stop-color="#6f4322"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="112" fill="url(#ruBg)"/>
+  <circle cx="128" cy="128" r="103" stroke="url(#ruRing)" stroke-width="10"/>
+  <path d="M78 70H125.4C151.5 70 168 85.7 168 108.8C168 126.6 157.7 139 141.2 144L171 186H143.5L117.4 148.6H103V186H78V70ZM123.8 128.7C137.2 128.7 143.9 121.6 143.9 111.1C143.9 100.3 136.9 93.4 123.3 93.4H103V128.7H123.8Z" fill="#5a3318"/>
+  <path d="M177.5 70V136.8C177.5 153.8 167.8 166 148.8 166C130 166 120.3 153.8 120.3 136.8V124.4H143.1V134.7C143.1 142.9 145.6 146.6 148.8 146.6C152.1 146.6 154.6 142.9 154.6 134.7V70H177.5Z" fill="#9f6233"/>
+</svg>
