@@ -26,6 +26,14 @@ const Hero = () => {
         <ComputersCanvas />
       </div>
 
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-[4] hidden items-end justify-end pr-4 pb-10 md:flex lg:pr-10">
+        <img
+          src={heroComputer}
+          alt="Computer visual"
+          className="w-[40vw] min-w-[300px] max-w-[560px] object-contain opacity-90"
+        />
+      </div>
+
       <div
         className={`absolute inset-0 top-[120px] z-10 mx-auto flex max-w-7xl flex-row items-start gap-5 ${styles.paddingX}`}
       >
@@ -34,32 +42,22 @@ const Hero = () => {
           <div className="violet-gradient h-40 w-1 sm:h-80" />
         </div>
 
-        <div className="relative w-full">
-          <div className="pointer-events-none absolute -right-10 top-40 hidden lg:block xl:-right-20 xl:top-32">
-            <img
-              src={heroComputer}
-              alt="Computer visual"
-              className="h-[48vh] w-auto max-w-[38vw] object-contain opacity-85"
-            />
-          </div>
-
-          <div className="relative z-10 max-w-3xl">
-            <h1 className={`${styles.heroHeadText} font-heading`}>
-              Hi, I'm <span className="theme-accent-text">{config.hero.name}</span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2`}>
-              {config.hero.p[0]} <br className="hidden sm:block" />
-              {config.hero.p[1]}
-            </p>
-            <motion.a
-              href="#projects"
-              onClick={handleViewProjects}
-              whileHover={{ y: -3 }}
-              className="theme-accent-text mt-8 inline-flex rounded-full border theme-accent-border px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em]"
-            >
-              View Projects
-            </motion.a>
-          </div>
+        <div className="relative z-10 max-w-3xl">
+          <h1 className={`${styles.heroHeadText} font-heading`}>
+            Hi, I'm <span className="theme-accent-text">{config.hero.name}</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2`}>
+            {config.hero.p[0]} <br className="hidden sm:block" />
+            {config.hero.p[1]}
+          </p>
+          <motion.a
+            href="#projects"
+            onClick={handleViewProjects}
+            whileHover={{ y: -3 }}
+            className="theme-accent-text mt-8 inline-flex rounded-full border theme-accent-border px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em]"
+          >
+            View Projects
+          </motion.a>
         </div>
       </div>
 
