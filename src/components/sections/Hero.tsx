@@ -20,13 +20,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative mx-auto min-h-screen w-full overflow-hidden">
+    <section className="relative mx-auto w-full overflow-hidden">
       <div
-        className={`mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-start gap-6 pb-16 pt-[170px] sm:pt-[190px] md:grid-cols-[auto,1fr,0.9fr] ${styles.paddingX}`}
+        className={`mx-auto grid min-h-[850px] max-w-7xl grid-cols-1 items-start gap-6 pb-20 pt-[140px] sm:pt-[160px] md:min-h-screen md:grid-cols-[auto,1fr,0.9fr] ${styles.paddingX}`}
       >
         <div className="mt-2 flex flex-col items-center justify-start">
           <div className="theme-accent-bg h-5 w-5 rounded-full" />
-          <div className="violet-gradient h-40 w-1 sm:h-80" />
+          <div className="violet-gradient h-32 w-1 sm:h-80" />
         </div>
 
         <div className="max-w-3xl">
@@ -45,6 +45,14 @@ const Hero = () => {
           >
             View Projects
           </motion.a>
+
+          <div className="pointer-events-none mt-8 flex justify-center md:hidden">
+            <img
+              src={heroComputer}
+              alt="Computer visual"
+              className="w-[88%] max-w-[360px] object-contain opacity-90"
+            />
+          </div>
         </div>
 
         <div className="pointer-events-none hidden w-full justify-end self-end md:flex">
@@ -56,7 +64,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="xs:bottom-10 absolute bottom-16 z-10 flex w-full items-center justify-center">
+      <div className="absolute bottom-8 z-10 hidden w-full items-center justify-center sm:flex">
         <a href="#about">
           <div className="border-secondary flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 p-2">
             <motion.div
