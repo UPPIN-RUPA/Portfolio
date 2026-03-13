@@ -37,14 +37,25 @@ const Hero = () => {
             {config.hero.p[0]} <br className="hidden sm:block" />
             {config.hero.p[1]}
           </p>
-          <motion.a
-            href="#projects"
-            onClick={handleViewProjects}
-            whileHover={{ y: -3 }}
-            className="theme-accent-text mt-8 inline-flex rounded-full border theme-accent-border px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em]"
-          >
-            View Projects
-          </motion.a>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <motion.a
+              href="#projects"
+              onClick={handleViewProjects}
+              whileHover={{ y: -3 }}
+              className="theme-accent-text inline-flex rounded-full border theme-accent-border px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em]"
+            >
+              View Projects
+            </motion.a>
+            <motion.a
+              href={config.hero.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ y: -3 }}
+              className="theme-button inline-flex rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em]"
+            >
+              Download Resume
+            </motion.a>
+          </div>
 
           <div className="pointer-events-none mt-8 flex justify-center md:hidden">
             <img

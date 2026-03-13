@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../../constants/styles";
 import { navLinks } from "../../constants";
+import { config } from "../../constants/config";
 import { logo, menu, close } from "../../assets";
 
 const ThemeToggle = ({
@@ -148,7 +149,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden items-center sm:flex">
+        <div className="hidden items-center gap-3 sm:flex">
+          <a
+            href={config.hero.resumeUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="theme-button rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em]"
+          >
+            Resume
+          </a>
           <ThemeToggle theme={theme} onToggle={handleThemeToggle} />
         </div>
 
@@ -180,6 +189,16 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li className="cursor-pointer text-[15px] font-medium uppercase tracking-[0.08em] theme-text-main">
+                <a
+                  href={config.hero.resumeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setToggle(false)}
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>

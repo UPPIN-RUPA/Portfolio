@@ -13,6 +13,7 @@ type TConfig = {
   hero: {
     name: string;
     p: string[];
+    resumeUrl: string;
   };
   contact: {
     form: {
@@ -50,6 +51,7 @@ export const config: TConfig = {
       "Software Developer, Java Developer, and Cloud & Data Engineer",
       "building secure data platforms, analytics, and scalable backend systems",
     ],
+    resumeUrl: "/rupa-uppin-resume.pdf",
   },
   contact: {
     p: "Let's connect",

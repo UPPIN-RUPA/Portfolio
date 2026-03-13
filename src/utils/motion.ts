@@ -4,15 +4,16 @@ import { Variants } from "framer-motion";
 export const textVariant = () => {
   return {
     hidden: {
-      y: -50,
+      y: -28,
       opacity: 0,
     },
     show: {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        duration: 1.25,
+        type: "tween",
+        duration: 0.72,
+        ease: "easeOut",
       },
     },
   };
@@ -26,8 +27,8 @@ export const fadeIn = (
 ): Variants => {
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === "left" ? 48 : direction === "right" ? -48 : 0,
+      y: direction === "up" ? 48 : direction === "down" ? -48 : 0,
       opacity: 0,
     },
     show: {
@@ -50,7 +51,7 @@ export const zoomIn = (
 ) => {
   return {
     hidden: {
-      scale: 0,
+      scale: 0.92,
       opacity: 0,
     },
     show: {
