@@ -47,13 +47,11 @@ const Hero = () => {
               View Projects
             </motion.a>
             <motion.a
-              href={config.hero.resumeUrl}
-              target="_blank"
-              rel="noreferrer"
+              href={`mailto:${config.html.email}?subject=Resume%20request`}
               whileHover={{ y: -3 }}
               className="theme-button inline-flex rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em]"
             >
-              Download Resume
+              Request Resume
             </motion.a>
           </div>
 
