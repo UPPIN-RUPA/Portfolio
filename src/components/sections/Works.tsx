@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
@@ -16,7 +17,11 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   tags,
   image,
   sourceCodeLink,
+  details,
+  metrics,
 }) => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
       <Tilt glareEnable tiltEnable tiltMaxAngleX={22} tiltMaxAngleY={22}>
@@ -24,16 +29,17 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
           <div className="relative h-[220px] w-full overflow-hidden rounded-2xl theme-border">
             <img src={image} alt={name} className="h-full w-full object-cover" />
             <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
-              <div
-                onClick={() => window.open(sourceCodeLink, "_blank")}
-                className="black-gradient theme-border flex h-10 w-10 cursor-pointer items-center justify-center rounded-full"
-              >
-                <img
-                  src={github}
-                  alt="github"
-                  className="h-1/2 w-1/2 object-contain"
-                />
-              </div>
+              {sourceCodeLink && (
+                <a
+                  href={sourceCodeLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${name} source on GitHub`}
+                  className="black-gradient theme-border flex h-10 w-10 cursor-pointer items-center justify-center rounded-full"
+                >
+                  <img src={github} alt="" className="h-1/2 w-1/2 object-contain" />
+                </a>
+              )}
             </div>
           </div>
           <div className="mt-5">
@@ -47,6 +53,31 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
               </p>
             ))}
           </div>
+          <button
+            type="button"
+            aria-expanded={expanded}
+            onClick={() => setExpanded((value) => !value)}
+            className="theme-accent-text mt-5 text-xs font-semibold uppercase tracking-[0.12em]"
+          >
+            {expanded ? "Hide case study −" : "Explore case study +"}
+          </button>
+          {expanded && (
+            <div className="theme-border mt-4 space-y-3 border-t pt-4">
+              {details.map((detail) => (
+                <p key={detail} className="text-secondary text-[13px] leading-6">
+                  {detail}
+                </p>
+              ))}
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                {metrics.map((metric) => (
+                  <div key={metric.label} className="theme-border rounded-xl border p-3">
+                    <strong className="theme-accent-text block text-lg">{metric.value}</strong>
+                    <span className="theme-text-muted text-[10px] leading-4">{metric.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </Tilt>
     </motion.div>

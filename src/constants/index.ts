@@ -1,46 +1,19 @@
 import type {
   TNavLink,
   TService,
-  TTechnology,
   TExperience,
   TTestimonial,
   TProject,
 } from "../types";
 
 import {
-  mobile,
   backend,
   creator,
+  mobile,
   web,
-  aws,
-  snowflake,
-  python,
-  sql,
-  java,
-  csharp,
-  spring,
-  django,
-  aspnet,
-  mongodb,
-  tableau,
-  ssrs,
-  powerbi,
-  git,
-  jenkins,
-  jira,
-  dbt,
-  park,
-  hcltech,
-  temenos,
-  inmovidu,
-  vosyn,
   carrent,
   jobit,
   tripguide,
-  battleship,
-  inventory,
-  mentoring,
-  farmbazaar,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -52,104 +25,62 @@ export const navLinks: TNavLink[] = [
 ];
 
 const services: TService[] = [
-  { title: "Cloud & Data Engineer", icon: backend },
-  { title: "Backend Developer", icon: web },
-  { title: "Analytics Engineer", icon: mobile },
-  { title: "ETL & Reporting Specialist", icon: creator },
+  { title: "Machine Learning", icon: backend },
+  { title: "Generative AI & RAG", icon: creator },
+  { title: "Financial & Telecom NLP", icon: mobile },
+  { title: "Production ML Systems", icon: web },
 ];
 
-const technologies: TTechnology[] = [
-  { name: "AWS", icon: aws },
-  { name: "Snowflake", icon: snowflake },
-  { name: "DBT", icon: dbt },
-  { name: "Python", icon: python },
-  { name: "SQL", icon: sql },
-  { name: "Java", icon: java },
-  { name: "C#", icon: csharp },
-  { name: "Spring Boot", icon: spring },
-  { name: "Django REST", icon: django },
-  { name: "ASP.NET MVC", icon: aspnet },
-  { name: "MongoDB", icon: mongodb },
-  { name: "Tableau", icon: tableau },
-  { name: "SSRS", icon: ssrs },
-  { name: "Power BI", icon: powerbi },
-  { name: "Jenkins", icon: jenkins },
-  { name: "Git", icon: git },
-  { name: "Jira", icon: jira },
+const skillGroups = [
+  {
+    title: "AI & machine learning",
+    tools: ["Predictive modeling", "XGBoost", "scikit-learn", "PyTorch", "TensorFlow", "Transformers", "NLP", "Computer vision"],
+  },
+  {
+    title: "Generative AI & language",
+    tools: ["LLMs", "RAG", "Prompt engineering", "Fine-tuning", "Hugging Face", "LangChain", "Vector databases"],
+  },
+  {
+    title: "Data & production",
+    tools: ["Python", "SQL", "Apache Spark", "Databricks", "Airflow", "AWS", "SageMaker", "MLflow", "FastAPI", "Docker", "Kubernetes", "GCP", "BigQuery", "Vertex AI", "Azure ML"],
+  },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "Data Engineer",
-    companyName: "Park National Bank",
-    icon: park,
-    iconBg: "#b98f68",
-    date: "Aug 2025 - Present",
+    title: "AI/ML Scientist",
+    companyName: "BlackRock",
+    companyLabel: "BLK",
+    iconBg: "#171717",
+    date: "May 2025 - Present",
     points: [
-      "Architected and operated fault-tolerant AWS Glue to Snowflake ETL pipelines for multi-million record financial datasets across DEV/QA/PROD.",
-      "Designed Snowflake dimensional models and reporting marts that reduced manual reporting effort and query latency by 60%.",
-      "Built Tableau and SSRS dashboards for suspicious login behavior, browser anomalies, IP frequency shifts, and MFA gaps.",
-      "Implemented historicization logic and reconciliation checks for audit-ready data models and production reporting.",
+      "Developed retrieval workflows for financial filings, reports, research records, and earnings-call transcripts so analysts can search source material and review grounded answers.",
+      "Worked across Llama-based language models, LangChain, transformer NLP, financial extraction, and earnings-call sentiment analysis.",
+      "Supported evaluation, FastAPI services, and production workflows using AWS, Spark, Airflow, MLflow, Docker, Kubernetes, and SageMaker.",
     ],
   },
   {
-    title: "Application Developer",
-    companyName: "Park National Bank",
-    icon: park,
-    iconBg: "#d7b38f",
-    date: "May 2025 - Aug 2025",
+    title: "Data Scientist",
+    companyName: "Hexaware Technologies",
+    companyLabel: "HX",
+    iconBg: "#ef6c39",
+    date: "Aug 2021 - Jun 2023",
     points: [
-      "Enhanced enterprise banking applications using C#, ASP.NET MVC, and SQL Server for secure archival and structured reporting.",
-      "Automated SSRS reporting workflows to improve compliance documentation efficiency.",
+      "Built a telecom churn prediction and retention analytics workflow using customer usage, billing, complaint, and support history.",
+      "Engineered 140 behavioral features and developed XGBoost, BERT complaint-classification, and PyTorch LSTM models across 4.2M subscriber records.",
+      "Improved Spark and Databricks feature processing and supported Airflow, MLflow, Docker, and SageMaker workflows.",
     ],
   },
   {
-    title: "Software Engineer II",
-    companyName: "HCLTech",
-    icon: hcltech,
-    iconBg: "#b98f68",
-    date: "Mar 2023 - Jul 2023",
+    title: "Data Analyst",
+    companyName: "Veritas Software",
+    companyLabel: "V",
+    iconBg: "#4b6570",
+    date: "Jan 2020 - Jul 2021",
     points: [
-      "Developed Java-based backend services with MySQL for enterprise e-commerce and financial systems.",
-      "Designed database schemas, optimized queries, and improved backend performance reliability.",
-      "Contributed to Jenkins and Git CI/CD workflows for stable multi-environment deployments.",
-    ],
-  },
-  {
-    title: "Software Engineer",
-    companyName: "Temenos",
-    icon: temenos,
-    iconBg: "#d7b38f",
-    date: "Aug 2021 - Feb 2023",
-    points: [
-      "Built Spring Boot microservices and distributed REST APIs for secure financial transaction processing.",
-      "Resolved OAuth token lifecycle vulnerability by implementing centralized logout API and gateway token-clear mechanism.",
-      "Led cross-team UI branding migration across five product teams using Angular, React, Bootstrap, HTML, and CSS.",
-    ],
-  },
-  {
-    title: "Software Engineering Intern",
-    companyName: "Inmovidu",
-    icon: inmovidu,
-    iconBg: "#b98f68",
-    date: "Mar 2021 - Jun 2021",
-    points: [
-      "Developed backend logic using Java and SQL for secure business data processing.",
-      "Assisted in frontend-backend integration and API-based workflows.",
-      "Designed and optimized relational queries, improving retrieval performance and reducing redundant API calls.",
-      "Implemented input validation and exception handling to improve runtime stability.",
-    ],
-  },
-  {
-    title: "AI Engineering Contributor",
-    companyName: "Vosyn",
-    icon: vosyn,
-    iconBg: "#d7b38f",
-    date: "2024",
-    points: [
-      "Contributed to AI-ready data workflows and model-supporting backend components.",
-      "Worked on data preparation and integration patterns for scalable analytics use cases.",
-      "Collaborated on implementation and validation of production-oriented AI features.",
+      "Queried 6TB of backup telemetry in Redshift and cleaned 3.5M S3-hosted records with Python and pandas.",
+      "Built Tableau and Power BI reporting for storage utilization and license-renewal KPIs, including dashboards adopted by 35 regional sales managers.",
+      "Used hypothesis testing and exploratory analysis to investigate backup failures and renewal trends.",
     ],
   },
 ];
@@ -158,89 +89,78 @@ const testimonials: TTestimonial[] = [];
 
 const projects: TProject[] = [
   {
-    name: "Consumer Fraud Behavioral Analytics",
+    name: "Investment Research Retrieval & NLP",
     description:
-      "Engineered Snowflake transformations and Tableau dashboards to detect high-risk login behavior, IP anomalies, and MFA gaps for proactive fraud monitoring.",
+      "Predictive modeling, financial research classification, and retrieval-augmented search across investment and market information.",
+    details: [
+      "Analyzed portfolio and market datasets with Python, SQL, and predictive modeling; the resume reports an 18% improvement in risk-signal accuracy.",
+      "Applied feature engineering and XGBoost, reducing model error by 16% on validation benchmarks; statistical analysis identified $2.4M in potential optimization opportunities.",
+      "Used PyTorch, Transformers, and NLP to classify financial research; built RAG pipelines with LangChain and vector databases, and used MLflow with AWS SageMaker to shorten model deployment cycles.",
+    ],
+    metrics: [
+      { value: "+18%", label: "risk-signal accuracy" },
+      { value: "−16%", label: "model error on validation benchmarks" },
+      { value: "$2.4M", label: "potential optimization opportunities identified" },
+      { value: "−28%", label: "model deployment cycle time" },
+    ],
     tags: [
-      { name: "snowflake", color: "blue-text-gradient" },
-      { name: "tableau", color: "green-text-gradient" },
-      { name: "fraud-analytics", color: "pink-text-gradient" },
+      { name: "xgboost", color: "blue-text-gradient" },
+      { name: "pytorch", color: "green-text-gradient" },
+      { name: "transformers", color: "pink-text-gradient" },
+      { name: "rag", color: "blue-text-gradient" },
+      { name: "langchain", color: "green-text-gradient" },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
+    sourceCodeLink: "",
   },
   {
-    name: "Monthly Financial Reporting Automation",
+    name: "Customer Analytics & Churn Modeling",
     description:
-      "Built structured reporting tables and recurring KPI dashboards with Snowflake and SSRS to improve transparency and reduce manual reporting load.",
-    tags: [
-      { name: "ssrs", color: "blue-text-gradient" },
-      { name: "etl", color: "green-text-gradient" },
-      { name: "reporting", color: "pink-text-gradient" },
+      "Customer segmentation, churn-indicator analysis, and behavioral forecasting across telecom and client datasets.",
+    details: [
+      "Analyzed customer datasets using Python, SQL, and Pandas; applied supervised learning and XGBoost to forecast customer behavior.",
+      "Exploratory analysis and feature engineering surfaced $680K in potential revenue opportunities across client transaction patterns.",
+      "Processed large datasets with Spark and SQL, created Tableau and Power BI reporting, and improved source consistency through ETL and validation checks.",
     ],
-    image: jobit,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
-  },
-  {
-    name: "SANCHARA Cloud Microservices Platform",
-    description:
-      "Designed a Django REST + React + MongoDB platform for goal tracking, savings analytics, and life-planning workflows with secure role-based APIs.",
+    metrics: [
+      { value: "−17%", label: "prediction error during validation" },
+      { value: "$680K", label: "potential revenue opportunities identified" },
+      { value: "−34%", label: "analytical processing time" },
+      { value: "+27%", label: "source-data consistency" },
+    ],
     tags: [
-      { name: "django-rest", color: "blue-text-gradient" },
-      { name: "react", color: "green-text-gradient" },
-      { name: "mongodb", color: "pink-text-gradient" },
+      { name: "xgboost", color: "blue-text-gradient" },
+      { name: "pytorch", color: "green-text-gradient" },
+      { name: "bert", color: "pink-text-gradient" },
+      { name: "mlops", color: "blue-text-gradient" },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
+    sourceCodeLink: "",
   },
   {
-    name: "Inventory Management System",
+    name: "Operational Data & KPI Analytics",
     description:
-      "Built an inventory management platform with stock tracking, transaction logging, category-wise reporting, and operational dashboards.",
-    tags: [
-      { name: "inventory", color: "blue-text-gradient" },
-      { name: "dashboard", color: "green-text-gradient" },
-      { name: "sql", color: "pink-text-gradient" },
+      "Operational data analysis and reporting across customer and product metrics, with a focus on data quality and planning insights.",
+    details: [
+      "Analyzed and validated operational data with Python, SQL, Pandas, and NumPy, improving dataset completeness by 26% for management reporting.",
+      "Created Tableau dashboards that reduced manual reporting effort by 30%; SQL report validation improved reporting accuracy.",
+      "Exploratory analysis identified $310K in potential cost-saving opportunities; statistical analysis clarified drivers behind 14% performance fluctuations.",
     ],
-    image: inventory,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
-  },
-  {
-    name: "Student Mentoring System",
-    description:
-      "Developed a student mentoring application with mentor-mentee mapping, session tracking, progress notes, and engagement workflows.",
-    tags: [
-      { name: "mentoring", color: "blue-text-gradient" },
-      { name: "workflow", color: "green-text-gradient" },
-      { name: "web-app", color: "pink-text-gradient" },
+    metrics: [
+      { value: "+26%", label: "dataset completeness" },
+      { value: "−30%", label: "manual reporting effort" },
+      { value: "$310K", label: "potential cost-saving opportunities" },
+      { value: "14%", label: "performance fluctuations analyzed" },
     ],
-    image: mentoring,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
-  },
-  {
-    name: "Farm Bazaar",
-    description:
-      "Built a farm-to-market marketplace concept enabling produce listings, local buyer discovery, and simplified order/inventory management for farmers.",
     tags: [
-      { name: "marketplace", color: "blue-text-gradient" },
-      { name: "agri-tech", color: "green-text-gradient" },
-      { name: "full-stack", color: "pink-text-gradient" },
+      { name: "python", color: "blue-text-gradient" },
+      { name: "sql", color: "green-text-gradient" },
+      { name: "tableau", color: "pink-text-gradient" },
+      { name: "analytics", color: "blue-text-gradient" },
     ],
-    image: farmbazaar,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
-  },
-  {
-    name: "Battleship Game - Java OOP Architecture",
-    description:
-      "Designed and implemented a fully object-oriented Battleship simulation with modular classes, dual-board state management, placement validation, and hit detection rules.",
-    tags: [
-      { name: "java", color: "blue-text-gradient" },
-      { name: "oop", color: "green-text-gradient" },
-      { name: "game-logic", color: "pink-text-gradient" },
-    ],
-    image: battleship,
-    sourceCodeLink: "https://github.com/UPPIN-RUPA",
+    image: jobit,
+    sourceCodeLink: "",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, skillGroups, experiences, testimonials, projects };

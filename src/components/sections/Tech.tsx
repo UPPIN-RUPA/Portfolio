@@ -1,52 +1,39 @@
-import { useEffect, useState } from "react";
-
-import { BallCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
-import { technologies } from "../../constants";
+import { motion } from "framer-motion";
+import { skillGroups } from "../../constants";
+import { config } from "../../constants/config";
+import { fadeIn } from "../../utils/motion";
+import { Header } from "../atoms/Header";
 
 const Tech = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 768px)");
-    setIsMobile(media.matches);
-
-    const onChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
-    media.addEventListener("change", onChange);
-
-    return () => media.removeEventListener("change", onChange);
-  }, []);
-
-  if (isMobile) {
-    return (
-      <div className="grid grid-cols-3 gap-4 sm:grid-cols-4">
-        {technologies.map((technology) => (
-          <div
-            key={technology.name}
-            className="theme-surface theme-border flex h-24 w-24 flex-col items-center justify-center rounded-2xl p-3"
+  return (
+    <>
+      <Header useMotion={true} {...config.sections.tech} />
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
+        {skillGroups.map((group, index) => (
+          <motion.div
+            key={group.title}
+            variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+            className="premium-glass rounded-2xl p-6"
           >
-            <img
-              src={technology.icon}
-              alt={technology.name}
-              className="h-10 w-10 object-contain"
-            />
-            <p className="theme-text-muted mt-2 text-[11px] font-semibold text-center leading-3">
-              {technology.name}
-            </p>
-          </div>
+            <h3 className="theme-text-main text-lg font-bold">{group.title}</h3>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {group.tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="theme-text-muted rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs transition hover:-translate-y-0.5 hover:border-cyan-300/50 hover:text-white"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         ))}
       </div>
-    );
-  }
-
-  return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
-      {technologies.map((technology) => (
-        <div className="h-28 w-28" key={technology.name}>
-          <BallCanvas icon={technology.icon} />
-        </div>
-      ))}
-    </div>
+      <p className="text-secondary mt-5 max-w-3xl text-sm leading-6">
+        I select methods based on the task and evaluate outputs against source data, business context, and operational constraints.
+      </p>
+    </>
   );
 };
 
