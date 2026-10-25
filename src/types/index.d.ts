@@ -6,10 +6,12 @@ export type TCommonProps = {
 
 export type TExperience = {
   companyName: string;
+  companyLabel: string;
   iconBg: string;
   date: string;
   points: string[];
-} & Required<Omit<TCommonProps, "name">>;
+  icon?: string;
+} & Required<Pick<TCommonProps, "title">>;
 
 export type TTestimonial = {
   testimonial: string;
@@ -20,6 +22,8 @@ export type TTestimonial = {
 
 export type TProject = {
   description: string;
+  details: string[];
+  metrics: { value: string; label: string }[];
   tags: {
     name: string;
     color: string;
