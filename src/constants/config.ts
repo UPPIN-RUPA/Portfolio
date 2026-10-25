@@ -13,7 +13,6 @@ type TConfig = {
   hero: {
     name: string;
     p: string[];
-    resumeUrl: string;
   };
   contact: {
     form: {
@@ -36,22 +35,22 @@ type TConfig = {
     experience: TSection;
     feedbacks: TSection;
     works: Required<TSection>;
+    tech: TSection;
   };
 };
 
 export const config: TConfig = {
   html: {
-    title: "Rupa Uppin Portfolio",
+    title: "Rupa Uppin | AI & Machine Learning Portfolio",
     fullName: "Rupa Uppin",
     email: "uppinrupa@icloud.com",
   },
   hero: {
     name: "Rupa Uppin",
     p: [
-      "Software Developer, Java Developer, and Cloud & Data Engineer",
-      "building secure data platforms, analytics, and scalable backend systems",
+      "AI/ML Scientist working across predictive modeling and Generative AI",
+      "building source-grounded systems and data products people can trust",
     ],
-    resumeUrl: "/rupa-uppin-resume.pdf",
   },
   contact: {
     p: "Let's connect",
@@ -73,7 +72,7 @@ export const config: TConfig = {
       p: "Introduction",
       h2: "Overview.",
       content:
-        "Software Engineer and Cloud Data Engineer with 4+ years of experience building scalable backend systems and data platforms in banking and fintech environments. I specialize in designing reliable APIs, microservices, and cloud-native data pipelines using Java, Spring Boot, Python, Snowflake, and AWS. My work focuses on transforming complex financial data into secure, high-performance systems that support fraud detection, compliance reporting, and business intelligence. Known for quickly understanding complex systems, improving data reliability and performance, and delivering solutions that enable teams to make faster, data-driven decisions. Passionate about building robust engineering solutions that combine strong software architecture with modern data engineering practices.",
+        "AI/ML Scientist with around five years of experience spanning business analytics, predictive modeling, natural language processing, and Generative AI. I work across the path from source data and model experiments to evaluation and production systems. Recent work includes retrieval-augmented financial research, telecom churn prediction, and analytics for enterprise backup and license renewals. I care about evidence, clear model tradeoffs, and building tools that help people make better-informed decisions.",
     },
     experience: {
       p: "What I have done so far",
@@ -87,7 +86,11 @@ export const config: TConfig = {
       p: "Selected work",
       h2: "Projects.",
       content:
-        "These projects showcase my work in cloud data engineering, reporting automation, and secure backend architecture. Each one reflects production-focused design, measurable business impact, and scalable implementation.",
+        "From financial research copilots to customer churn models, I connect data, machine learning, and production workflows to questions that matter to people using the results.",
+    },
+    tech: {
+      p: "AI, ML & production systems",
+      h2: "My toolkit.",
     },
   },
 };
