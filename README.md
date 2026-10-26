@@ -12,6 +12,14 @@ The site covers three areas of work:
 
 Project cards expand to show implementation details and reported outcomes. Estimated or attribution-dependent metrics are labeled accordingly.
 
+## Project case studies
+
+- [Investment Research Retrieval & NLP](projects/investment-research-retrieval-nlp.md)
+- [Customer Analytics & Churn Modeling](projects/customer-analytics-churn-modeling.md)
+- [Operational Data & KPI Analytics](projects/operational-data-kpi-analytics.md)
+
+These write-ups summarize professional experience and exclude proprietary source code and confidential data.
+
 ## Stack
 
 React, TypeScript, Vite, Tailwind CSS, Framer Motion, and Three.js.
